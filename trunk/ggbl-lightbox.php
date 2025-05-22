@@ -1,10 +1,10 @@
-<?php 
+<?php
 /**
  * Plugin Name: GGBL Lightbox
  * Plugin URI: https://wordpress.org/plugins/gg-lightbox/
  * Description: A simple lightbox and slider built specifically for the Gutenberg Gallery block
  * Author: Ben Dunkle
- * Version: 1.2.4
+ * Version: 1.5
  * Author URI: https://bendunkle.com/
  * Requires at least: 4.9
  * Requires PHP: 5.2.4

@@ -125,4 +125,39 @@ jQuery(document).ready(function($) {
 		// update current slide
 		current = dest;
 	});
+
+	// Swipe navigation for mobile
+	var touchStartX = null;
+	var touchEndX = null;
+	var swipeThreshold = 50; // Minimum px distance for swipe
+
+	$('body').on('touchstart', '#ggbl_slider', function(e) {
+	    if (e.originalEvent.touches.length === 1) {
+	        touchStartX = e.originalEvent.touches[0].clientX;
+	    }
+	});
+
+	$('body').on('touchmove', '#ggbl_slider', function(e) {
+	    if (e.originalEvent.touches.length === 1) {
+	        touchEndX = e.originalEvent.touches[0].clientX;
+	    }
+	});
+
+	$('body').on('touchend', '#ggbl_slider', function(e) {
+	    if (touchStartX !== null && touchEndX !== null) {
+	        var diff = touchStartX - touchEndX;
+	        if (Math.abs(diff) > swipeThreshold) {
+	            if (diff > 0) {
+	                // Swipe left: next
+	                $('.ggbl_next').trigger('click');
+	            } else {
+	                // Swipe right: prev
+	                $('.ggbl_prev').trigger('click');
+	            }
+	        }
+	    }
+	    // Reset
+	    touchStartX = null;
+	    touchEndX = null;
+	});
 });

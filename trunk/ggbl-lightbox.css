@@ -30,14 +30,16 @@
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	max-width: 80vw;
-	max-height: 80vh;
+	max-width: 90vw;
+	max-height: 90vh;
 	box-shadow: 0 0 1rem rgba(0, 0, 0, 0.6);
 }
 
 .ggbl_nav {
 	width: 100%;
-	top: 45%;
+	top: 50vh;
+	display: flex;
+	align-items: center;
 }
 
 .ggbl_nav, .ggbl_close {
@@ -52,7 +54,7 @@
 	display: block;
 	width: 0;
 	height: 0;
-	padding: 0 1rem;
+	padding: 0 .2rem;
 }
 
 .ggbl_prev {
