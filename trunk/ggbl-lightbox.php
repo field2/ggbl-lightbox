@@ -7,7 +7,7 @@
  * Author: Ben Dunkle
  * Version: 1.5
  * Author URI: https://bendunkle.com/
- * Requires at least: 4.9
+ * Requires at least: 5
  * Requires PHP: 5.2.4
  * License:     GPLv2 or later
  * License URI: http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
