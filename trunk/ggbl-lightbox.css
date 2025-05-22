@@ -14,6 +14,7 @@
 	position: relative;
 	width: 100vw;
 	height: 100vh;
+	overflow: hidden; /* Make sure this is here */
 }
 
 #ggbl_slider, #ggbl_slider li {
@@ -21,7 +22,16 @@
 	padding: 0;
 	list-style-type: none;
 	width: 100%;
-	overflow: hidden;
+}
+
+#ggbl_slider li {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: none; /* Only the active/animating slide is shown */
+	overflow: visible; /* Allow slides to move out of view */
 }
 
 #ggbl_slider img {
